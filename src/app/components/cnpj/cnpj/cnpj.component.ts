@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from 'primeng/api';
+import { CnpjService } from './cnpj.service';
 
 @Component({
   selector: 'app-cnpj',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CnpjComponent implements OnInit {
 
-  constructor() { }
+   buscacnpj: string = '';
+   buscar: boolean = false;
+
+  constructor(
+    private cnpjService: CnpjService,
+    private messageService: MessageService
+  ) { }
 
   ngOnInit(): void {
   }

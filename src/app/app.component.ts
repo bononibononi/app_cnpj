@@ -7,9 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-hideButtons(): any {
-throw new Error('Method not implemented.');
-}
-  title = 'app_cnpj';
-  
+  title = 'Busca por Cnpj';
+
+  constructor(
+    private router: Router
+  ){}
+
+  hideButtons(){
+    return this.router.url !== '/cnpj';
+   }
 }

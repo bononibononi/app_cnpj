@@ -1,22 +1,25 @@
 <div class="toolbar" role="banner">
-  <img class="ml-3" routerLink="/" src="assets/icons/icon.png" alt="Busca Cep" width="50px">
+  <img class="ml-3" routerLink="/" src="assets/icons/icon.png" alt="Busca por CNPJ" width="250px">
   <span class="ml-3">{{title}}</span>
 </div>
 <main>
+  <header>
+    <h1>
+      Vai se foder esse negócio
+    </h1>
+  </header>
   <div *ngIf="hideButtons()" class="grid justify-content-center mt-3">
       <div class="grid col-12 md:col-6 lg:col-6 xl:col-12">
-          <div class="col-12 md:col-6 lg:col-6">
-              <button pButton pRipple type="button" label="CEP" class="h-15rem p-button-rounded p-button-help w-full sizeButtonLabel"
-              routerLink="/cep"></button>
-          </div>
+          
           <div class="col-12 md:col-6 lg:col-6">
               <button pButton pRipple type="button" label="CNPJ" class="h-15rem p-button-rounded p-button-warning w-full sizeButtonLabel"
               routerLink="/cnpj"></button>
           </div>
+
       </div>
   </div>
 </main>
 
-<router-outlet>
-  <p> gustavo</p>
-</router-outlet>
+<router-outlet></router-outlet>
+
+<p-toast></p-toast>
